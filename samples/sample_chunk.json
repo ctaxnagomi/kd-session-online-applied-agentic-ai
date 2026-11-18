@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "content": "Owners and admins manage policies in Controls. Budget levels apply to entire workspace or all members.",
+  "source_url": "https://opencode.ai/docs/console/policies",
+  "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "metadata": {
+    "workshop": "kd-session-online",
+    "section": "Budget levels",
+    "version": "2026-11"
+  }
+}
