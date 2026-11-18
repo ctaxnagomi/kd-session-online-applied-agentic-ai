@@ -1,4 +1,4 @@
-# KD SESSION ONLINE — Applied Agentic AI
+# KD SESSION ONLINE - Applied Agentic AI
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Workshop](https://img.shields.io/badge/Workshop-Applied%20Agentic%20AI-orange.svg)](https://github.com/ctaxnagomi/kd-session-online-applied-agentic-ai)
@@ -8,7 +8,7 @@
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 
 **Strategic Corpus for OpenCode**  
-Hash-Verified · Local SQLite + Vector · Hugging Face · OpenCode Skill
+Hash-Verified | Local SQLite + Vector | Hugging Face | OpenCode Skill
 
 Hosted by: Rikayu / ctaxnagomi (KD Ambassador SWK)  
 Format: Online Discord session
@@ -70,12 +70,12 @@ cp RULESET-101.md ~/.config/opencode/skills/strategic-corpus/
 
 ## Session Outline
 
-1. **Harvest the Docs** — Official OpenCode documentation  
-2. **Chunk + Hash + Embed** — SHA-256 + sqlite-vec  
-3. **Local Query Demo** — Hybrid search + hash fetch  
-4. **Publish to Hugging Face** — Versioned, shareable corpus  
-5. **Package as OpenCode Skill** — `SKILL.md` + CTECX Instruct.ZIP  
-6. **End-to-end Demo** — Agent answers with citations + hashes  
+1. **Harvest the Docs** - Official OpenCode documentation  
+2. **Chunk + Hash + Embed** - SHA-256 + sqlite-vec  
+3. **Local Query Demo** - Hybrid search + hash fetch  
+4. **Publish to Hugging Face** - Versioned, shareable corpus  
+5. **Package as OpenCode Skill** - `SKILL.md` + CTECX Instruct.ZIP  
+6. **End-to-end Demo** - Agent answers with citations + hashes  
 
 ---
 
@@ -105,11 +105,11 @@ The foundational rules for the agent are defined in **[RULESET-101.md](RULESET-1
 
 ## Key Principles
 
-- **Absolute corpus** — the agent gets the real text
-- **Hash-fetch** — content-addressable and verifiable
-- **Local-first + remote verification** — SQLite on device, Hugging Face for sharing
-- **Skill as the interface** — the agent knows how to use the corpus
-- **Citation by default** — source URL + content hash on every answer
+- **Absolute corpus** - the agent gets the real text
+- **Hash-fetch** - content-addressable and verifiable
+- **Local-first + remote verification** - SQLite on device, Hugging Face for sharing
+- **Skill as the interface** - the agent knows how to use the corpus
+- **Citation by default** - source URL + content hash on every answer
 
 ---
 
@@ -134,5 +134,5 @@ Participants leave with:
 
 ---
 
-**KD SESSION ONLINE — Applied Agentic AI**  
-Strategic Corpus · Hash-Verified · Local + Hugging Face · OpenCode Skill
+**KD SESSION ONLINE - Applied Agentic AI**  
+Strategic Corpus | Hash-Verified | Local + Hugging Face | OpenCode Skill
