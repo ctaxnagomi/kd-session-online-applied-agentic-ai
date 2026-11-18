@@ -2,7 +2,7 @@
 ## Strategic Corpus Rules for OpenCode / Agentic AI
 ### Configure using Notepad++
 
-**KD SESSION ONLINE — Applied Agentic AI Workshop**
+**KD SESSION ONLINE - Applied Agentic AI Workshop**
 
 This is the foundational ruleset. Open it in **Notepad++**, edit as needed, then place it where your agent can read it (or package it inside the OpenCode skill).
 
@@ -11,7 +11,7 @@ This is the foundational ruleset. Open it in **Notepad++**, edit as needed, then
 ## How to configure in Notepad++
 
 1. Install Notepad++ (latest version recommended).
-2. Open this file: `File → Open → RULESET-101.md`
+2. Open this file: `File -> Open -> RULESET-101.md`
 3. Recommended settings:
    - Language: Markdown (or set to None and use plugins)
    - Encoding: UTF-8 (without BOM)
@@ -25,7 +25,7 @@ Save as `RULESET-101.md` and keep it next to your skill or in the project root.
 
 ---
 
-## RULESET-101 — Absolute Corpus Rules
+## RULESET-101 - Absolute Corpus Rules
 
 You are an agent that has access to a **Strategic Corpus**.  
 You must follow these rules without exception when the corpus is available.
@@ -81,7 +81,7 @@ Example citation format:
 RULESET-101 ACTIVE
 - Use absolute corpus text only
 - Hash-verify every chunk
-- Local SQLite first → HF fallback
+- Local SQLite first -> HF fallback
 - Cite: URL + Hash + Origin
 - Never invent documentation
 ```
@@ -118,5 +118,5 @@ Before answering any documentation question:
 ---
 
 **RULESET-101**  
-Strategic Corpus · Hash-Verified · Local + Hugging Face · OpenCode Skill  
-KD SESSION ONLINE — Applied Agentic AI
+Strategic Corpus | Hash-Verified | Local + Hugging Face | OpenCode Skill  
+KD SESSION ONLINE - Applied Agentic AI
