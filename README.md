@@ -29,19 +29,42 @@ Result: OpenCode (or any agent that can read skills) becomes competent on the do
 
 ---
 
-## Why this matters
+## Quick Start Code
 
-Most agents “know” documentation only because it was in their training data. That knowledge is incomplete, outdated, and not citable.
+### 1. Build the corpus (sample)
 
-A Strategic Corpus gives the agent:
+```bash
+cd scripts
+pip install sqlite-vec sentence-transformers
+python build_corpus.py
+```
 
-- Exact text (not a paraphrase)
-- A content hash so it can verify what it received
-- Local-first retrieval (fast, private)
-- Remote verification / distribution via Hugging Face
-- A skill that tells the agent exactly how to query and cite it
+### 2. Query by hash (Python)
 
-This is applied agentic AI.
+```python
+import sqlite3, hashlib
+
+def verify_and_fetch(db_path, expected_hash):
+    db = sqlite3.connect(db_path)
+    row = db.execute(
+        "SELECT content, source_url FROM chunks WHERE content_hash = ?",
+        (expected_hash,)
+    ).fetchone()
+    if not row:
+        return None
+    content, url = row
+    actual = hashlib.sha256(content.encode()).hexdigest()
+    assert actual == expected_hash, "Hash mismatch!"
+    return {"content": content, "url": url, "hash": actual}
+```
+
+### 3. Drop the skill into OpenCode
+
+```bash
+mkdir -p ~/.config/opencode/skills/strategic-corpus
+cp skills/strategic-corpus/SKILL.md ~/.config/opencode/skills/strategic-corpus/
+cp RULESET-101.md ~/.config/opencode/skills/strategic-corpus/
+```
 
 ---
 
@@ -64,7 +87,19 @@ The foundational rules for the agent are defined in **[RULESET-101.md](RULESET-1
 - Include it inside the OpenCode skill so the agent must follow absolute-corpus + hash-verification rules
 - Forces local-first retrieval, hash verification, and mandatory citation
 
-See the full ruleset in the file for the exact instructions the agent must obey.
+---
+
+## Files in this Workshop
+
+| File | Purpose |
+|------|---------|
+| `README.md` | This file |
+| `RULESET-101.md` | Agent rules (configure in Notepad++) |
+| `skills/strategic-corpus/SKILL.md` | Sample OpenCode skill |
+| `scripts/build_corpus.py` | Sample script to chunk, hash, embed into SQLite |
+| `samples/sample_chunk.json` | Example chunk format |
+| `samples/DATASET_CARD.md` | Hugging Face dataset card template |
+| `samples/INSTRUCT_ZIP_NOTE.md` | CTECX Instruct.ZIP note |
 
 ---
 
@@ -95,6 +130,7 @@ Participants leave with:
 - OpenCode installed
 - Hugging Face account
 - Notepad++ (for configuring RULESET-101)
+- `pip install sqlite-vec sentence-transformers` (for the sample script)
 
 ---
 
